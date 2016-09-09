@@ -1,0 +1,24 @@
+﻿<Properties StartupItem="CS422HW2/CS422HW2.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CS422HW2/ThreadPoolSleepSorter.cs">
+    <Files>
+      <File FileName="CS422HW2/PCQueue.cs" Line="40" Column="3" />
+      <File FileName="PCQueueTest/Test.cs" Line="33" Column="6" />
+      <File FileName="CS422HW2/Program.cs" Line="2" Column="24" />
+      <File FileName="CS422HW2/ThreadPoolSleepSorter.cs" Line="65" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CS422" expanded="True">
+            <Node name="PCQueueTest" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
