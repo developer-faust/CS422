@@ -14,33 +14,35 @@ namespace CS422
 
 		public static void Main()
 		{
-//			ThreadQ = new Thread[2];
-//			myQueue = new PCQueue ();
-//			Console.WriteLine ("Hello World");
-//
-//
-//			ThreadQ [0] = new Thread (new ThreadStart (QueueItems ));
-//			ThreadQ [1] = new Thread (new ThreadStart (DequeueItems ));
-//
-//			ThreadQ [0].Start ();
-//			ThreadQ [1].Start ();
-//
-//			Console.WriteLine ("SleepSort");
+			ThreadQ = new Thread[2];
+			myQueue = new PCQueue ();
+			Console.WriteLine ("Hello World");
 
-			Random rnd = new Random (); 
-			byte[] rndList = new byte[100];
- 			 
-			 
 
-			for (int i = 0; i < 100; i++) {
-				rndList[i] = (byte)rnd.Next (20);
-				Console.WriteLine ("{0} = {1}", i, rndList[i]);
-			}
+			ThreadQ [0] = new Thread (new ThreadStart (QueueItems ));
+			ThreadQ [1] = new Thread (new ThreadStart (DequeueItems ));
 
-			ushort count = 100;
-			mySleepSorter = new ThreadPoolSleepSorter (Console.Out, count); 
-			mySleepSorter.Sort (rndList);
-			mySleepSorter.Dispose ();
+			ThreadQ [0].Start ();
+			ThreadQ [1].Start ();
+
+
+			//			Console.WriteLine ("SleepSort");
+
+			// Begin SleepSorter 
+//			Random rnd = new Random (); 
+//			byte[] rndList = new byte[100];
+// 			 
+//			 
+//
+//			for (int i = 0; i < 100; i++) {
+//				rndList[i] = (byte)rnd.Next (20);
+//				Console.WriteLine ("{0} = {1}", i, rndList[i]);
+//			}
+//
+//			ushort count = 100;
+//			mySleepSorter = new ThreadPoolSleepSorter (Console.Out, count); 
+//			mySleepSorter.Sort (rndList);
+//			mySleepSorter.Dispose ();
 
 			Console.WriteLine ("Done!");
 		}

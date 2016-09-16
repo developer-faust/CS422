@@ -1,0 +1,66 @@
+Quiz #2 Questions:
+
+1. What is the approximate amount of memory associated with the call stack of a typical thread?
+
+about 1 megabyte
+		
+2. The System.Collections.Concurrent namespace has both a BlockingCollection and ConcurrentQueue class, both of which can offer thread-safe queue functionality. The “Take” function of the BlockingCollection has a similar overall purpose as the “TryDequeue” function of the ConcurrentQueue, in that they both attempt to deqeueue from the collection. But there is a key difference between how they’re designed to function. Explain the situations under which these functions are nearly identical and also the situation under which their functionality differs, along with the explain of HOW they differ in that circumstance.
+
+*******************************************************
+The Take() function in BlockingCollection has the ability to block the﻿ consumer if there is nothing to take i.e. the queue is empty. BlockingCollection will wait for an item to be provided from the producer side. ConcurrentQueue will need to handle the wait operation if the Queue is empty, and the producer will have to notify the consumer when the Queue is not empty.
+
+
+3. Assume an application has 3 threads total, including the main thread. The code is all in the main program class and looks something like this:
+
+public static string s = null;
+
+public void Main(string[] args) {
+
+      s = “Initialized on main thread”;
+
+      CreateAndStartThreadA();
+
+      CreateAndStartThreadB();
+
+      Thread.Sleep(500); // pauses main thread execution for 500 milliseconds
+
+      Console.WriteLine(s);
+
+      WaitForThreadAandBToComplete(); // i.e. “Join” calls on the thread objects
+
+}
+
+public void ThreadAFunction() { s = “Initialized on thread A”; }
+
+public void ThreadBFunction() { s = “Initialized on thread B”; }
+
+ 
+
+Assume that the program’s execution starts with a call to Main. Also assume that the CreateAndStart… functions are creating and starting a thread, as their name implies, AND that they always succeed. Thus the 3 threads in the picture are the main thread, thread A, and thread B. All threads have access to the string s. On the main thread, s is displayed via a Console.WriteLine call. What are the possibilities for what this app could produce as output? Address each of the following questions in your answer:
+
+    Could any of the 3 hard-coded strings potentially be in the output? If not all could be, which one(s) are guaranteed NOT to ever be displayed?
+    Could something other than one of the 3 hard-coded strings be displayed? If so, what?
+    Assuming successful creation of the threads and successful operation of Console.WriteLine if it has a valid string reference, could the application crash?
+    If there are a finite number of possibilities for the output, list them all and explain why/how we could arrive at each. If there are an infinite number of possibilities, explain why this is and give examples of things that could be displayed as well as reasons why/how they could end up being the output.
+    Use appropriate threading terminology and details about what the C# language does or does not guarantee for multi-threaded operations.
+
+**********************************************************
+There is only one possiblity. Since the join call is done after Console.WriteLine(). Only "initialized on main thread" will be displayed because strings are immutable and the original string s initialized in main will contain that copy of string.
+
+The threads will have access to the string object since strings are immutable therefore there is no need for atomicity.
+
+4. Briefly explain why incrementing an integer is not an atomic operation.
+Becuase its a read and write operation.
+
+
+5.The ThreadPool class in the .NET framework may not give up a thread to execute a task immediately when it is requested. Why is this? In other words, if the thread pool has a thread already ready to go for a task, why wouldn’t it execute that task immediately and instead choose to wait? What is it trying to achieve if not giving available threads for work items as soon as possible?
+
+Because the ThreadPool class is built to use threads more efficiently by providing application with a pool of threads that is managed by the Operating System. Therefore it will wait for the OS to provide a thread to execute that task. It is trying to achieve efficiency.
+
+6. Which of the following C# code statements will NOT work (assuming all the necessary namespaces are being used and thus the types are in scope)?
+
+int num = 10; lock(num)
+
+7. Many classes, in fact probably the MAJORITY of classes in C# code are not thread-safe. To implement a thread-safe class it’s common to use locks on shared data structures. The System.String class achieves thread safety without using any locks in its implementation. Explain how this was achieved. A simple answer (perhaps even just one particular word) will suffice.
+
+Strings are immutable.
