@@ -8,7 +8,8 @@ namespace CS422HW5
 		public static void Main (string[] args)
 		{
 			
-			Console.WriteLine ("Hello World!");  
+			Console.WriteLine ("Hello World!"); 
+			Console.ReadKey ();
 			WebServer.Start (4220, 5); 
 		}
 	}
