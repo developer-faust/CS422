@@ -65,6 +65,7 @@ namespace CS422
 
 		private static Request CreateRequest(TcpClient client)
 		{
+			throw new NotImplementedException ();
 
 		}
 		private static void ListenThreadWork(object obj)

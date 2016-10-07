@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
+using System.Linq;
 
 namespace CS422
 {
@@ -94,6 +95,7 @@ namespace CS422
 
 		public bool WriteResponse(string response)
 		{
+			return true;
 			
 		} 
 		#endregion
@@ -136,6 +138,7 @@ namespace CS422
 			return true;
 		}
 
+		// Validate the Method
 		public RequestStatus IsValidRequestMethod(string value, ref string outMethod)
 		{
 			RequestStatus status = RequestStatus.InValid;
@@ -143,8 +146,62 @@ namespace CS422
 			// First white space immediately following the Method
 			var indexOfSpace = value.IndexOf(' ');
 			int methodLength = indexOfSpace < 0 ? value.Length : indexOfSpace;
+		
+			foreach (var method in Methods.Where(l => l.Length >= methodLength)) {
+
+				for (int i = 0; i < value.Length; i++) {
+
+					status = RequestStatus.Indeterminate;
+					if (value[i] != method[i]) 
+					{
+
+						// Miss matched
+						status = RequestStatus.InValid;
+						break;
+					}
+
+					// The entire Method up to the first white space
+					if (i == method.Length - 1 && i + 1 == indexOfSpace)
+					{
+						status = RequestStatus.Valid;
+						outMethod = method;
+						return status;
+					}
+				}
+			}
+
+			// Invalid
+			return status;
 		}
 
+
+		// Validate the Uri
+		public RequestStatus IsValidUriRequest(string value, ref int outIndexOfSpace)
+		{
+			int foundSpaceIndex = value.IndexOf (' ', 0, 1);
+
+			if (foundSpaceIndex < 0)
+			{
+				return RequestStatus.Indeterminate; 
+			}
+
+			outIndexOfSpace = foundSpaceIndex;
+
+			return RequestStatus.Valid;
+		}
+
+
+		// Valid versions
+		public RequestStatus IsValidVersion(string value, ref string outVersion)
+		{
+			var status = RequestStatus.InValid;
+
+			int startingIndex = value.IndexOf (' ', 0, 1) + 1;
+			int clrfIndex = value.IndexOf (' ', StringComparison.Ordinal);
+
+			int versionLength = clrfIndex > 0 ? clrfIndex - startingIndex : value.Length - startingIndex;
+ 			
+		}
 
 		#endregion
 
@@ -182,6 +239,7 @@ namespace CS422
 			
 		}
 
+		#endregion
 
 
 		private ValidStates TryValidate(string value)
