@@ -1,5 +1,0 @@
-/home/osboxes/Github/CS422/CS422/CS422HW3/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/osboxes/Github/CS422/CS422/CS422HW3/bin/Debug/CS422HW3.exe.mdb
-/home/osboxes/Github/CS422/CS422/CS422HW3/bin/Debug/CS422HW3.exe
-/home/osboxes/Github/CS422/CS422/CS422HW3/obj/x86/Debug/CS422HW3.exe
-/home/osboxes/Github/CS422/CS422/CS422HW3/obj/x86/Debug/CS422HW3.exe.mdb
