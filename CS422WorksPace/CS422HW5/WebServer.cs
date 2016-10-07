@@ -26,13 +26,48 @@ namespace CS422
 
 			_NumOfThreads = threadsCount;
 
-			_ListeningThread = new Thread (new ParameterizedThreadStart (Listen));
+			_ListeningThread = new Thread (new ParameterizedThreadStart (ListenThreadWork));
 			_ListeningThread.Start (port); 
+
+			// Initialize all threads to wait a client connection
+			for (int i = 0; i < threadsCount; i++) 
+			{
+
+				// Create a new thread and add it to the list of threads
+				Thread t = new Thread (ClientThreadWork);
+				t.Start ( );
+				_Pool.Add (t);
+			}
 		}
 		 
+		private static void ClientThreadWork( )
+		{
+
+			// Do Work While true
+			while (true)
+			{ 
+				Console.WriteLine ("Doing Work");
+
+				TcpClient client = _ClientsCollection.Take ();
+
+				// No Clients
+				if (client == null)
+				{
+					break;
+				}
+
+				Request request = CreateRequest (client); 
 
 
-		private static void Listen(object obj)
+			}
+
+		}
+
+		private static Request CreateRequest(TcpClient client)
+		{
+
+		}
+		private static void ListenThreadWork(object obj)
 		{
 			int port = (int)obj; 
 			Console.WriteLine ("Listening on port {0}", port);
@@ -53,7 +88,6 @@ namespace CS422
 				} catch (SocketException ex) {
 					break;
 				}
-
 
 			}
 

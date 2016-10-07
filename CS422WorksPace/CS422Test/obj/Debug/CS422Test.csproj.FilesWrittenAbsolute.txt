@@ -1,8 +1,7 @@
-/home/osboxes/Documents/CS422WorksPace/CS422Test/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/osboxes/Documents/CS422WorksPace/CS422Test/bin/Debug/CS422Test.dll.mdb
-/home/osboxes/Documents/CS422WorksPace/CS422Test/bin/Debug/CS422Test.dll
-/home/osboxes/Documents/CS422WorksPace/CS422Test/obj/Debug/CS422Test.dll
-/home/osboxes/Documents/CS422WorksPace/CS422Test/obj/Debug/CS422Test.dll.mdb
-/home/osboxes/Documents/CS422WorksPace/CS422Test/bin/Debug/CS422HW1.exe
-/home/osboxes/Documents/CS422WorksPace/CS422Test/bin/Debug/CS422HW1.exe.mdb
-/home/osboxes/Documents/CS422WorksPace/CS422Test/bin/Debug/nunit.framework.dll
+/home/osboxes/CS422/CS422WorksPace/CS422Test/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/osboxes/CS422/CS422WorksPace/CS422Test/bin/Debug/CS422Test.dll.mdb
+/home/osboxes/CS422/CS422WorksPace/CS422Test/bin/Debug/CS422Test.dll
+/home/osboxes/CS422/CS422WorksPace/CS422Test/obj/Debug/CS422Test.dll
+/home/osboxes/CS422/CS422WorksPace/CS422Test/obj/Debug/CS422Test.dll.mdb
+/home/osboxes/CS422/CS422WorksPace/CS422Test/bin/Debug/CS422HW1.exe
+/home/osboxes/CS422/CS422WorksPace/CS422Test/bin/Debug/CS422HW1.exe.mdb

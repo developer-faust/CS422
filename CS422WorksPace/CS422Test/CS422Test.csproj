@@ -38,10 +38,4 @@
     <Compile Include="NumberTextWriterTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\CS422HW1\CS422HW1.csproj">
-      <Project>{C6E5A14D-DAE6-413E-B328-B656D34B9A68}</Project>
-      <Name>CS422HW1</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
