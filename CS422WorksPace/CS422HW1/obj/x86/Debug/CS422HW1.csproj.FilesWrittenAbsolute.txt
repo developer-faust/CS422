@@ -1,0 +1,5 @@
+/home/osboxes/Documents/CS422WorksPace/CS422HW1/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/osboxes/Documents/CS422WorksPace/CS422HW1/bin/Debug/CS422HW1.exe.mdb
+/home/osboxes/Documents/CS422WorksPace/CS422HW1/bin/Debug/CS422HW1.exe
+/home/osboxes/Documents/CS422WorksPace/CS422HW1/obj/x86/Debug/CS422HW1.exe
+/home/osboxes/Documents/CS422WorksPace/CS422HW1/obj/x86/Debug/CS422HW1.exe.mdb

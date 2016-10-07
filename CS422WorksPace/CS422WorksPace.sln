@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS422HW1", "CS422HW1\CS422HW1.csproj", "{C6E5A14D-DAE6-413E-B328-B656D34B9A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS422Test", "CS422Test\CS422Test.csproj", "{33AAA3EF-D1BE-4256-B6C4-5BD532F03D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS422HW5", "CS422HW5\CS422HW5.csproj", "{F3552725-FDD4-427E-BA40-91936664A9C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33AAA3EF-D1BE-4256-B6C4-5BD532F03D44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33AAA3EF-D1BE-4256-B6C4-5BD532F03D44}.Debug|x86.Build.0 = Debug|Any CPU
+		{33AAA3EF-D1BE-4256-B6C4-5BD532F03D44}.Release|x86.ActiveCfg = Release|Any CPU
+		{33AAA3EF-D1BE-4256-B6C4-5BD532F03D44}.Release|x86.Build.0 = Release|Any CPU
+		{C6E5A14D-DAE6-413E-B328-B656D34B9A68}.Debug|x86.ActiveCfg = Debug|x86
+		{C6E5A14D-DAE6-413E-B328-B656D34B9A68}.Debug|x86.Build.0 = Debug|x86
+		{C6E5A14D-DAE6-413E-B328-B656D34B9A68}.Release|x86.ActiveCfg = Release|x86
+		{C6E5A14D-DAE6-413E-B328-B656D34B9A68}.Release|x86.Build.0 = Release|x86
+		{F3552725-FDD4-427E-BA40-91936664A9C2}.Debug|x86.ActiveCfg = Debug|x86
+		{F3552725-FDD4-427E-BA40-91936664A9C2}.Debug|x86.Build.0 = Debug|x86
+		{F3552725-FDD4-427E-BA40-91936664A9C2}.Release|x86.ActiveCfg = Release|x86
+		{F3552725-FDD4-427E-BA40-91936664A9C2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
